@@ -1,22 +1,27 @@
 package com.mycompany.currencycarlton;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
+import static java.lang.Double.parseDouble;
 import java.util.ArrayList;
+import java.util.Scanner;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 
 public class Scraper {
     
-    static File data_file = new File("src/main/java/com/mycompany/currencycarlton/data.txt");
+    static String source_file = "src/main/java/com/mycompany/currencycarlton/data.txt";
+    
+    static File data_file = new File(source_file);
     
     public static void scrapeData() throws IOException {
         
         // ArrayList init to hold Currency names and conversion rates
-        ArrayList<Double> rate_list = new ArrayList<Double>();
-        ArrayList<String> name_list = new ArrayList<String>();
+        //ArrayList<Double> rate_list = new ArrayList<Double>();
+        //ArrayList<String> name_list = new ArrayList<String>();
         FileWriter writer = new FileWriter(data_file);
 
 
@@ -43,10 +48,9 @@ public class Scraper {
                     // Selects row class @ URL and converts them to variables
                     final String currency_name = row.select("td:nth-of-type(1)").text();
                     final double currency_rate = Double.parseDouble(row.select("td:nth-of-type(2)").text());
-                        System.out.println(currency_name+": "+currency_rate);
                         
-                    name_list.add(currency_name);
-                    rate_list.add(currency_rate);
+                    //name_list.add(currency_name);
+                    //rate_list.add(currency_rate);
                     
                     writer.write(currency_name+":"+currency_rate+"\n");
                 }   
@@ -58,7 +62,16 @@ public class Scraper {
        writer.close(); 
     }
     
-    public static void writeData(ArrayList<String> name, ArrayList<Double> rate) {
+    public static void readToArray(ArrayList<String> name, ArrayList<Double> rate) throws FileNotFoundException {
         
+        Scanner scan = new Scanner(data_file);
+        scan.useDelimiter("[:\\n]");
+        
+        while (scan.hasNext()) {
+            name.add(scan.next().trim());
+            rate.add(parseDouble(scan.next().trim()));
+        }
+        scan.close();
     }
 }
+
