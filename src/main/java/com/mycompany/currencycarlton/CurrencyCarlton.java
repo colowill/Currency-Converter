@@ -1,13 +1,10 @@
 package com.mycompany.currencycarlton;
 
 import static com.mycompany.currencycarlton.Scraper.*;
+import static com.mycompany.currencycarlton.Statements.*;
 import java.io.IOException;
 import java.util.ArrayList;
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
-import org.jsoup.nodes.Element;
-
-
+import java.util.Scanner;
 
 /**
  *
@@ -16,21 +13,52 @@ import org.jsoup.nodes.Element;
  * 
  */
 
-
 // Driver class where all the Conversion happens
 
-
 public class CurrencyCarlton {
-    
-    public static void main(String[] args) throws IOException {
+      
+    public static void main(String[] args) throws IOException, InterruptedException {
+        
         ArrayList<Double> rate_list = new ArrayList<Double>();
         ArrayList<String> name_list = new ArrayList<String>();
         
-        scrapeData();
+        scrapeData(); readToArray(name_list,rate_list);
         
-        readToArray(name_list,rate_list);
+        final int LIST_MAX  = rate_list.size(); int index;
         
-        System.out.println(name_list.get(1));
+        boolean exit = false;
+        
+        Scanner scan = new Scanner(System.in);
+        
+            while (!exit) {
+            
+            intro();
+        
+            System.out.println("\nConverting from? [Enter a #] ");
+        
+            
+            /**
+             * TODO: Format currencies in organized lists
+             */
+            
+            
+            for (int i = 0; i < LIST_MAX; i++) {
+                System.out.println("[ "+i+" ] "+name_list.get(i));
+            }
+            
+            
+            /**
+             * TODO: Handle InputMismatchException for index
+             */
+            
+            
+            index = scan.nextInt();
+            
+            while (index > LIST_MAX || index < 0) {
+                errorIndex();
+                scan.nextInt();
+            }
         
     }
+  }
 }

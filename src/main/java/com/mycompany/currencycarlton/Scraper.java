@@ -62,6 +62,7 @@ public class Scraper {
        writer.close(); 
     }
     
+    // Method to input currency data from data.txt into arrays passed through the parameters
     public static void readToArray(ArrayList<String> name, ArrayList<Double> rate) throws FileNotFoundException {
         
         Scanner scan = new Scanner(data_file);
