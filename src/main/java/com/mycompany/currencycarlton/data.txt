@@ -1,52 +1,54 @@
-Argentine Peso:979.879577
-Australian Dollar:1.487139
+Updated as of Mon, 14 Oct 2024 15:05 EST (from URL: https://www.x-rates.com/table/?from=USD&amount=1)
+
+Argentine Peso:979.913932
+Australian Dollar:1.487721
 Bahraini Dinar:0.376
-Botswana Pula:13.29956
-Brazilian Real:5.573493
-Bruneian Dollar:1.308462
-Bulgarian Lev:1.79357
-Canadian Dollar:1.37962
-Chilean Peso:927.411432
-Chinese Yuan Renminbi:7.086906
-Colombian Peso:4206.937095
-Czech Koruna:23.169626
-Danish Krone:6.842181
-Euro:0.917038
-Hong Kong Dollar:7.764308
-Hungarian Forint:367.609046
-Icelandic Krona:136.921231
-Indian Rupee:84.065401
-Indonesian Rupiah:15570.036193
-Iranian Rial:42065.88696
-Israeli Shekel:3.768606
-Japanese Yen:149.856444
-Kazakhstani Tenge:485.849984
-South Korean Won:1357.806539
-Kuwaiti Dinar:0.306817
-Libyan Dinar:4.787787
-Malaysian Ringgit:4.295091
-Mauritian Rupee:46.221569
-Mexican Peso:19.340626
-Nepalese Rupee:134.56769
-New Zealand Dollar:1.64221
-Norwegian Krone:10.783571
-Omani Rial:0.384908
-Pakistani Rupee:277.621613
-Philippine Peso:57.453648
-Polish Zloty:3.937946
+Botswana Pula:13.306641
+Brazilian Real:5.578336
+Bruneian Dollar:1.308757
+Bulgarian Lev:1.794095
+Canadian Dollar:1.379785
+Chilean Peso:928.013902
+Chinese Yuan Renminbi:7.085933
+Colombian Peso:4209.201212
+Czech Koruna:23.176505
+Danish Krone:6.844094
+Euro:0.917306
+Hong Kong Dollar:7.763738
+Hungarian Forint:367.681736
+Icelandic Krona:136.956682
+Indian Rupee:84.06382
+Indonesian Rupiah:15569.416781
+Iranian Rial:42097.745724
+Israeli Shekel:3.765303
+Japanese Yen:149.764123
+Kazakhstani Tenge:486.053372
+South Korean Won:1358.069171
+Kuwaiti Dinar:0.306765
+Libyan Dinar:4.786883
+Malaysian Ringgit:4.294524
+Mauritian Rupee:46.24652
+Mexican Peso:19.359852
+Nepalese Rupee:134.56516
+New Zealand Dollar:1.64217
+Norwegian Krone:10.794763
+Omani Rial:0.384954
+Pakistani Rupee:277.492164
+Philippine Peso:57.44258
+Polish Zloty:3.938486
 Qatari Riyal:3.64
-Romanian New Leu:4.561876
-Russian Ruble:95.665275
+Romanian New Leu:4.563187
+Russian Ruble:95.590087
 Saudi Arabian Riyal:3.75
-Singapore Dollar:1.308462
-South African Rand:17.578094
-Sri Lankan Rupee:292.982033
-Swedish Krona:10.426414
-Swiss Franc:0.862872
-Taiwan New Dollar:32.208964
-Thai Baht:33.283075
-Trinidadian Dollar:6.787598
-Turkish Lira:34.267513
+Singapore Dollar:1.308757
+South African Rand:17.595355
+Sri Lankan Rupee:292.919234
+Swedish Krona:10.429645
+Swiss Franc:0.862995
+Taiwan New Dollar:32.208444
+Thai Baht:33.309506
+Trinidadian Dollar:6.786428
+Turkish Lira:34.26769
 Emirati Dirham:3.6725
-British Pound:0.765769
-Venezuelan Bolivar:3874469.661978
+British Pound:0.765888
+Venezuelan Bolivar:3883931.556304

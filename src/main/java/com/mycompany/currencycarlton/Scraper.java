@@ -1,5 +1,6 @@
 package com.mycompany.currencycarlton;
 
+import static com.mycompany.currencycarlton.Statements.getTime;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
@@ -10,7 +11,7 @@ import java.util.Scanner;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
-import java.util.HashMap;
+import java.util.LinkedHashMap;
 
 public class Scraper {
     
@@ -20,16 +21,21 @@ public class Scraper {
     
     public static void scrapeData() throws IOException {
         
-        // ArrayList init to hold Currency names and conversion rates
-        //ArrayList<Double> rate_list = new ArrayList<Double>();
-        //ArrayList<String> name_list = new ArrayList<String>();
-        FileWriter writer = new FileWriter(data_file);
-
-
-        
-        // URL source
+        // URL source for conversion rates
         final String url = 
                 "https://www.x-rates.com/table/?from=USD&amount=1";
+        
+        /**
+         * FileWriter in order to write to data.txt, also marks the time that the data was scraped
+         * Using a .txt file ensures that the user can still convert if they don't
+         * have access to the website or internet
+         */
+        
+        FileWriter writer = new FileWriter(data_file);
+        String time_update = "Updated as of "+getTime()+" (from URL: "+url+")";
+        writer.write(time_update+"\n\n");
+        
+        
         
         try {
             // Scraping data using Jsoup
@@ -61,11 +67,12 @@ public class Scraper {
     }
     
     // Method to input currency data from data.txt into a HashMap passed through the parameters
-    public static void readToArray(HashMap<String,Double> currencies) throws FileNotFoundException {
+    public static void readToArray(LinkedHashMap<String,Double> currencies) throws FileNotFoundException {
         
         Scanner scan = new Scanner(data_file);
         scan.useDelimiter("[:\\n]");
         
+        scan.nextLine();
         while (scan.hasNext()) {
             /*
             Putting the name of the HashMap into it's key slot 

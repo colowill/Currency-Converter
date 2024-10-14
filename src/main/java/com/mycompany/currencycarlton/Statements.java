@@ -1,5 +1,8 @@
 package com.mycompany.currencycarlton;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
 /**
  *
  * @author 2headaxe
@@ -21,6 +24,12 @@ public class Statements {
     
     public static void errorIndex() {
         System.out.println("[ ERROR ] The # you entered was out of the range of currencies, please try again.");
+    }
+    
+    public static String getTime() {
+        LocalDateTime time = LocalDateTime.now();
+        DateTimeFormatter formatted = DateTimeFormatter.ofPattern("EEE, dd MMM yyyy HH:mm 'EST'");
+        return time.format(formatted);
     }
     
 }

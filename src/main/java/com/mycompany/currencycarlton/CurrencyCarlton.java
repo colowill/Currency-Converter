@@ -3,8 +3,9 @@ package com.mycompany.currencycarlton;
 import static com.mycompany.currencycarlton.Scraper.*;
 import static com.mycompany.currencycarlton.Statements.*;
 import java.io.IOException;
-import java.util.Scanner;
 import java.util.HashMap;
+import java.util.Scanner;
+import java.util.LinkedHashMap;
 
 
 /**
@@ -20,7 +21,7 @@ public class CurrencyCarlton {
       
     public static void main(String[] args) throws IOException, InterruptedException {
 
-        HashMap<String,Double> currency_list = new HashMap<String,Double>();
+        LinkedHashMap<String,Double> currency_list = new LinkedHashMap<>();
         
         
         scrapeData(); readToArray(currency_list);
