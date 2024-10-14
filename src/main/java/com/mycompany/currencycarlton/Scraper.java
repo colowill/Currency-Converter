@@ -10,6 +10,7 @@ import java.util.Scanner;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
+import java.util.HashMap;
 
 public class Scraper {
     
@@ -48,9 +49,6 @@ public class Scraper {
                     // Selects row class @ URL and converts them to variables
                     final String currency_name = row.select("td:nth-of-type(1)").text();
                     final double currency_rate = Double.parseDouble(row.select("td:nth-of-type(2)").text());
-                        
-                    //name_list.add(currency_name);
-                    //rate_list.add(currency_rate);
                     
                     writer.write(currency_name+":"+currency_rate+"\n");
                 }   
@@ -62,15 +60,18 @@ public class Scraper {
        writer.close(); 
     }
     
-    // Method to input currency data from data.txt into arrays passed through the parameters
-    public static void readToArray(ArrayList<String> name, ArrayList<Double> rate) throws FileNotFoundException {
+    // Method to input currency data from data.txt into a HashMap passed through the parameters
+    public static void readToArray(HashMap<String,Double> currencies) throws FileNotFoundException {
         
         Scanner scan = new Scanner(data_file);
         scan.useDelimiter("[:\\n]");
         
         while (scan.hasNext()) {
-            name.add(scan.next().trim());
-            rate.add(parseDouble(scan.next().trim()));
+            /*
+            Putting the name of the HashMap into it's key slot 
+            and the currencies conversion rate by $USD into it's value slot.
+            */
+            currencies.put((scan.next().trim()),(parseDouble(scan.next().trim())));
         }
         scan.close();
     }

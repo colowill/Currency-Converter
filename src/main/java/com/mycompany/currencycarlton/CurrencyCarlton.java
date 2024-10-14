@@ -3,8 +3,9 @@ package com.mycompany.currencycarlton;
 import static com.mycompany.currencycarlton.Scraper.*;
 import static com.mycompany.currencycarlton.Statements.*;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.HashMap;
+
 
 /**
  *
@@ -18,47 +19,47 @@ import java.util.Scanner;
 public class CurrencyCarlton {
       
     public static void main(String[] args) throws IOException, InterruptedException {
+
+        HashMap<String,Double> currency_list = new HashMap<String,Double>();
         
-        ArrayList<Double> rate_list = new ArrayList<Double>();
-        ArrayList<String> name_list = new ArrayList<String>();
         
-        scrapeData(); readToArray(name_list,rate_list);
+        scrapeData(); readToArray(currency_list);
         
-        final int LIST_MAX  = rate_list.size(); int index;
+        final int LIST_MAX  = currency_list.size(); int index = 0;
         
         boolean exit = false;
         
         Scanner scan = new Scanner(System.in);
         
+        
+        for (HashMap.Entry<String, Double> entry : currency_list.entrySet()) {
+            System.out.printf("%-10s %-10.2f%n", entry.getKey(), entry.getValue());
+        }
+            /*
             while (!exit) {
             
             intro();
-        
+              UNCOMMENT THIS LINE
             System.out.println("\nConverting from? [Enter a #] ");
-        
+
+            // TODO: Format currencies in organized lists
             
-            /**
-             * TODO: Format currencies in organized lists
-             */
             
             
             for (int i = 0; i < LIST_MAX; i++) {
                 System.out.println("[ "+i+" ] "+name_list.get(i));
             }
             
-            
-            /**
-             * TODO: Handle InputMismatchException for index
-             */
-            
-            
+            // TODO: Handle InputMismatchException for index
+ 
             index = scan.nextInt();
             
             while (index > LIST_MAX || index < 0) {
                 errorIndex();
                 scan.nextInt();
             }
+            
+            */
         
     }
   }
-}
