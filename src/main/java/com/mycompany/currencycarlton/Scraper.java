@@ -35,8 +35,6 @@ public class Scraper {
         String time_update = "Updated as of "+getTime()+" (from URL: "+url+")";
         writer.write(time_update+"\n\n");
         
-        
-        
         try {
             // Scraping data using Jsoup
             
@@ -71,7 +69,6 @@ public class Scraper {
         
         Scanner scan = new Scanner(data_file);
         scan.useDelimiter("[:\\n]");
-        
         scan.nextLine();
         while (scan.hasNext()) {
             name.add(scan.next().trim());
