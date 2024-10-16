@@ -67,20 +67,18 @@ public class Scraper {
     }
     
     // Method to input currency data from data.txt into a HashMap passed through the parameters
-    public static void readToArray(LinkedHashMap<String,Double> currencies) throws FileNotFoundException {
+    public static void readToArray(ArrayList<String> name, ArrayList<Double> rate) throws FileNotFoundException {
         
         Scanner scan = new Scanner(data_file);
         scan.useDelimiter("[:\\n]");
         
         scan.nextLine();
         while (scan.hasNext()) {
-            /*
-            Putting the name of the HashMap into it's key slot 
-            and the currencies conversion rate by $USD into it's value slot.
-            */
-            currencies.put((scan.next().trim()),(parseDouble(scan.next().trim())));
+            name.add(scan.next().trim());
+            rate.add(parseDouble(scan.next().trim()));
         }
         scan.close();
+    
     }
 }
 

@@ -2,6 +2,7 @@ package com.mycompany.currencycarlton;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
 
 /**
  *
@@ -23,13 +24,23 @@ public class Statements {
     }
     
     public static void errorIndex() {
-        System.out.println("[ ERROR ] The # you entered was out of the range of currencies, please try again.");
+        System.out.println("[ ERROR ] The # you entered was invalid, please try again.");
     }
     
     public static String getTime() {
         LocalDateTime time = LocalDateTime.now();
         DateTimeFormatter formatted = DateTimeFormatter.ofPattern("EEE, dd MMM yyyy HH:mm 'EST'");
         return time.format(formatted);
+    }
+    
+    public static void mainMenu() {
+        System.out.println("[ 0 ] View currencies\n"
+                             + "[ 1 ] Convert\n"
+                             + "[ 2 ] EXIT");
+    }
+    
+    public static void currencyMenu(ArrayList<String> name, ArrayList<Double> rate) {
+        // TODO: Impliment currency menu in organized format
     }
     
 }
