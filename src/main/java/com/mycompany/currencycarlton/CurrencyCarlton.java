@@ -53,16 +53,18 @@ public class CurrencyCarlton {
         // START OF PROGRAM
         intro();
         
-        int from = 0;               // Index of which currency user is converting from
-        int to = 0;                 // Index of which currency user is converting to
-        double amt = 0;                // Amount of money being converted
-        boolean exit = false;   // Boolean to determine if program is continuosly running
+        int from = 0;                               // Index of which currency user is converting from
+        int to = 0;                                 // Index of which currency user is converting to
+        boolean exit = false;                       // Boolean to determine if program is continuosly running
+        boolean currency_block = true;
+        boolean conversion_block = true;
         
-        while (!exit) {
+        // TODO: IMPLIMENT LOOP TO DO MULTIPLE CONVERSION IN ONE RUN
         currencyMenu(names,rates);
         System.out.println();
         System.out.println("\nSelect which currency to convert by typing it's corresponding # seperated by a colon [ from:to ]");
         
+    while (currency_block) {
         try {
   
         String input = scan.nextLine();
@@ -71,24 +73,34 @@ public class CurrencyCarlton {
         from = Integer.parseInt(split[0]);
         to = Integer.parseInt(split[1]);
         
-        
-        
+        currency_block = false;
         System.out.println("\n"+names.get(from)+" ("+icon[from]+")  to  "+names.get(to)+" ("+icon[to]+")");
+        System.out.print("\nAmount? \n"+icon[from]+" ");
         
         } catch (IndexOutOfBoundsException | InputMismatchException | NumberFormatException e) {
             errorIndex();               // Prints error message is input is invalid
         }
-        
+    }
+    
+    while (conversion_block) {
         try {
-        System.out.print("\nAmount? \n"+icon[from]+" ");
-        amt = scan.nextDouble();                                           // Scans amount to be converted
-        double conversion = (amt/rates.get(from))*rates.get(to);
-        System.out.println(icon[to]+" "+conversion);
         
-        } catch (IndexOutOfBoundsException | InputMismatchException e) {
+        // TODO figure out why this infinetly loops when catches exception
+        double amt = scan.nextDouble();                                           // Scans amount to be converted
+        
+        double conversion = (amt/rates.get(from))*rates.get(to);
+        System.out.print(icon[to]+" ");
+        System.out.println(String.format("%.2f",conversion));
+        System.out.println(getTime());
+        
+        conversion_block = false;
+        outro();
+        
+        } catch (IndexOutOfBoundsException | InputMismatchException | NumberFormatException e) {
             errorIndex();               // Prints error message is input is invalid
         }
     }
+ }
 }
-}
+
 

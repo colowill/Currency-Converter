@@ -24,6 +24,16 @@ public class Statements {
         Thread.sleep(800);
     }
     
+    public static void outro() throws InterruptedException {
+        Thread.sleep(2500);
+        System.out.print(
+        "\t\t\t\t    +++++++++++++++++++++++++++++++++++++++++\n" +
+        "\t\t\t\t   *****                                 *****\n" +
+        "\t\t\t\t *****            SEE YOU SOON!            *****\n" +
+        "\t\t\t\t   *****                                 *****\n" +
+        "\t\t\t\t    +++++++++++++++++++++++++++++++++++++++++\n");
+    }
+    
     public static void errorIndex() {
         System.out.println("[ERROR] Input was invalid, please try again.");
     }
