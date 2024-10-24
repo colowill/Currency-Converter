@@ -18,21 +18,21 @@ public class Statements {
         System.out.print(
         "\t\t\t\t\t    ++++++++++++++++++++++++++++++++++++++++\n" +
         "\t\t\t\t\t   *****                                *****\n" +
-        "\t\t\t\t\t *****    WELCOME TO CURRENCY CARLTON     *****\n" +
+        "\t\t\t\t\t *****         CURRENCY CONVERTER         *****\n" +
         "\t\t\t\t\t   *****                                *****\n" +
         "\t\t\t\t\t    ++++++++++++++++++++++++++++++++++++++++\n");
         Thread.sleep(800);
     }
     
     public static void outro() throws InterruptedException {
-        Thread.sleep(2500);
+        Thread.sleep(300);
         System.out.print(
         "\t\t\t\t\t    +++++++++++++++++++++++++++++++++++++++++\n" +
         "\t\t\t\t\t   *****                                 *****\n" +
-        "\t\t\t\t\t *****            SEE YOU SOON!            *****\n" +
+        "\t\t\t\t\t *****             THANK  YOU!             *****\n" +
         "\t\t\t\t\t   *****                                 *****\n" +
         "\t\t\t\t\t    +++++++++++++++++++++++++++++++++++++++++\n");
-        Thread.sleep(2500);
+        Thread.sleep(300);
     }
     
     public static void errorIndex() {
@@ -73,5 +73,7 @@ public class Statements {
             output = ("[ "+(i+perColumn*3)+" ] "+name.get(i+perColumn*3));
             System.out.print(output);
         }
+        System.out.println();
+        System.out.println("\nSelect which currency to convert by typing it's corresponding # seperated by a colon [ from:to ]");
     }
 }

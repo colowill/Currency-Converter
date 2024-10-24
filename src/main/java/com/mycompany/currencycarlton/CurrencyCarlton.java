@@ -55,15 +55,14 @@ public class CurrencyCarlton {
         
         int from = 0;                               // Index of which currency user is converting from
         int to = 0;                                 // Index of which currency user is converting to
-        boolean exit = false;                       // Decides to wether try/catch block should loop based off of invalid input
+        boolean tryLoop = false;                    // Decides to wether try/catch block should loop based off of invalid input
+        boolean restart = true;
         
         // TODO: IMPLIMENT LOOP TO DO MULTIPLE CONVERSION IN ONE RUN
-        currencyMenu(names,rates);
-        System.out.println();
-        System.out.println("\nSelect which currency to convert by typing it's corresponding # seperated by a colon [ from:to ]");
         
- 
-        while (!exit) {
+        while (restart) {
+            currencyMenu(names,rates);
+        while (!tryLoop) {
         /**
          * Iterates through try block, and breaks if it doesn't get caught at any point through the code
          */
@@ -79,7 +78,7 @@ public class CurrencyCarlton {
                 to = Integer.parseInt(split[1]);
         
                 System.out.println("\n"+names.get(from)+" ("+icon[from]+")  to  "+names.get(to)+" ("+icon[to]+")");
-                System.out.print("\nAmount? \n"+icon[from]+" ");
+                System.out.print("====================================\nAmount: \n"+icon[from]+" ");
                 break;
             } catch (IndexOutOfBoundsException | InputMismatchException | NumberFormatException e) {
                 // error message
@@ -87,29 +86,37 @@ public class CurrencyCarlton {
             }
         }
         
-        exit = false;
-        while (!exit) {
+        tryLoop = false;
+        while (!tryLoop) {
             
             try {
         
-        // TODO figure out why this infinetly loops when catches exception
-            double amt = scan.nextDouble();
-            
-        
-            double conversion = (amt/rates.get(from))*rates.get(to);
-            System.out.print("_____________\n");
-            System.out.print(icon[to]+" ");
-            System.out.println(String.format("%.2f",conversion));
-            System.out.println(getTime());
-        
-            outro();
-            break;
-        } catch (IndexOutOfBoundsException | InputMismatchException | NumberFormatException e) {
+                double amt = scan.nextDouble();
+
+                double conversion = (amt/rates.get(from))*rates.get(to);
+                System.out.print("equates to..\n");
+                System.out.print(icon[to]+" ");
+                System.out.println(String.format("%.3f",conversion));
+                System.out.println(getTime()+"\n====================================");
+   
+                break;
+            } catch (IndexOutOfBoundsException | InputMismatchException | NumberFormatException e) {
             // error message and repeats print statement asking for amount
-            errorIndex();
-            System.out.print("\nAmount? \n"+icon[from]+" ");
-            scan.next();
+                errorIndex();
+                System.out.print("\nAmount: \n"+icon[from]+" ");
+                scan.next();
         }
     }
+        
+        
+        // TODO: ALLOW USER TO DO MULTIPLE CONVErsIONS
+        scan.nextLine();
+        System.out.println("\nWould you like to run again? (y/n)");
+        String anotherInput = scan.nextLine().toLowerCase();   
+        restart = anotherInput.equals("y");
+            
+     }
+        // prints outro message
+        outro();
   }
 }
