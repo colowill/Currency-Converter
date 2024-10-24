@@ -87,11 +87,14 @@ public class CurrencyCarlton {
             }
         }
         
+        exit = false;
         while (!exit) {
+            
             try {
         
         // TODO figure out why this infinetly loops when catches exception
             double amt = scan.nextDouble();
+            
         
             double conversion = (amt/rates.get(from))*rates.get(to);
             System.out.print("_____________\n");
@@ -102,8 +105,10 @@ public class CurrencyCarlton {
             outro();
             break;
         } catch (IndexOutOfBoundsException | InputMismatchException | NumberFormatException e) {
-            // error message
+            // error message and repeats print statement asking for amount
             errorIndex();
+            System.out.print("\nAmount? \n"+icon[from]+" ");
+            scan.next();
         }
     }
   }
