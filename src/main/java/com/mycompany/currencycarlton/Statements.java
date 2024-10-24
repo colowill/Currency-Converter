@@ -16,22 +16,23 @@ public class Statements {
     // Intro message
     public static void intro() throws InterruptedException {
         System.out.print(
-        "\t\t\t\t    ++++++++++++++++++++++++++++++++++++++++\n" +
-        "\t\t\t\t   *****                                *****\n" +
-        "\t\t\t\t *****    WELCOME TO CURRENCY CARLTON     *****\n" +
-        "\t\t\t\t   *****                                *****\n" +
-        "\t\t\t\t    ++++++++++++++++++++++++++++++++++++++++\n");
+        "\t\t\t\t\t    ++++++++++++++++++++++++++++++++++++++++\n" +
+        "\t\t\t\t\t   *****                                *****\n" +
+        "\t\t\t\t\t *****    WELCOME TO CURRENCY CARLTON     *****\n" +
+        "\t\t\t\t\t   *****                                *****\n" +
+        "\t\t\t\t\t    ++++++++++++++++++++++++++++++++++++++++\n");
         Thread.sleep(800);
     }
     
     public static void outro() throws InterruptedException {
         Thread.sleep(2500);
         System.out.print(
-        "\t\t\t\t    +++++++++++++++++++++++++++++++++++++++++\n" +
-        "\t\t\t\t   *****                                 *****\n" +
-        "\t\t\t\t *****            SEE YOU SOON!            *****\n" +
-        "\t\t\t\t   *****                                 *****\n" +
-        "\t\t\t\t    +++++++++++++++++++++++++++++++++++++++++\n");
+        "\t\t\t\t\t    +++++++++++++++++++++++++++++++++++++++++\n" +
+        "\t\t\t\t\t   *****                                 *****\n" +
+        "\t\t\t\t\t *****            SEE YOU SOON!            *****\n" +
+        "\t\t\t\t\t   *****                                 *****\n" +
+        "\t\t\t\t\t    +++++++++++++++++++++++++++++++++++++++++\n");
+        Thread.sleep(2500);
     }
     
     public static void errorIndex() {

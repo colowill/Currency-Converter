@@ -55,52 +55,56 @@ public class CurrencyCarlton {
         
         int from = 0;                               // Index of which currency user is converting from
         int to = 0;                                 // Index of which currency user is converting to
-        boolean exit = false;                       // Boolean to determine if program is continuosly running
-        boolean currency_block = true;
-        boolean conversion_block = true;
+        boolean exit = false;                       // Decides to wether try/catch block should loop based off of invalid input
         
         // TODO: IMPLIMENT LOOP TO DO MULTIPLE CONVERSION IN ONE RUN
         currencyMenu(names,rates);
         System.out.println();
         System.out.println("\nSelect which currency to convert by typing it's corresponding # seperated by a colon [ from:to ]");
         
-    while (currency_block) {
-        try {
-  
-        String input = scan.nextLine();
-        String[] split = input.split(":");                            // Splits inputs by :
  
-        from = Integer.parseInt(split[0]);
-        to = Integer.parseInt(split[1]);
+        while (!exit) {
+        /**
+         * Iterates through try block, and breaks if it doesn't get caught at any point through the code
+         */
+            try {
+                
+                // Scanning input from currencyMenu
+                
+                String input = scan.nextLine();
+                // Splits inputs by : into two seperate vars
+                String[] split = input.split(":");                            
+       
+                from = Integer.parseInt(split[0]);
+                to = Integer.parseInt(split[1]);
         
-        currency_block = false;
-        System.out.println("\n"+names.get(from)+" ("+icon[from]+")  to  "+names.get(to)+" ("+icon[to]+")");
-        System.out.print("\nAmount? \n"+icon[from]+" ");
-        
-        } catch (IndexOutOfBoundsException | InputMismatchException | NumberFormatException e) {
-            errorIndex();               // Prints error message is input is invalid
+                System.out.println("\n"+names.get(from)+" ("+icon[from]+")  to  "+names.get(to)+" ("+icon[to]+")");
+                System.out.print("\nAmount? \n"+icon[from]+" ");
+                break;
+            } catch (IndexOutOfBoundsException | InputMismatchException | NumberFormatException e) {
+                // error message
+                errorIndex();               
+            }
         }
-    }
-    
-    while (conversion_block) {
-        try {
+        
+        while (!exit) {
+            try {
         
         // TODO figure out why this infinetly loops when catches exception
-        double amt = scan.nextDouble();                                           // Scans amount to be converted
+            double amt = scan.nextDouble();
         
-        double conversion = (amt/rates.get(from))*rates.get(to);
-        System.out.print(icon[to]+" ");
-        System.out.println(String.format("%.2f",conversion));
-        System.out.println(getTime());
+            double conversion = (amt/rates.get(from))*rates.get(to);
+            System.out.print("_____________\n");
+            System.out.print(icon[to]+" ");
+            System.out.println(String.format("%.2f",conversion));
+            System.out.println(getTime());
         
-        conversion_block = false;
-        outro();
-        
+            outro();
+            break;
         } catch (IndexOutOfBoundsException | InputMismatchException | NumberFormatException e) {
-            errorIndex();               // Prints error message is input is invalid
+            // error message
+            errorIndex();
         }
     }
- }
+  }
 }
-
-
