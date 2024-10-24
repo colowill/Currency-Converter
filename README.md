@@ -15,6 +15,5 @@ Project Goals:
 
 	•	Implement the program into a WebSite using reactJS.
 	•	Create the logo, a butler named Carlton!
- 
-![ScreenRecording2024-10-24at5 24 02PM-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/37e580a4-6397-4376-989c-a631d1d24a09)
 
+![ScreenRecording2024-10-24at5 24 02PM-ezgif com-speed](https://github.com/user-attachments/assets/3a8a126c-6d4f-4ec1-8cf2-c87f1dc8ada3)
