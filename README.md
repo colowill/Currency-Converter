@@ -15,7 +15,5 @@ Project Goals:
 
 	•	Implement the program into a WebSite using reactJS.
 	•	Create the logo, a butler named Carlton!
- 
-<img width="350" alt="tscreenshot_2024-10-14_at_31325 pm" src="https://github.com/user-attachments/assets/08988295-8ca5-459a-ac97-4780ae86810c">
 
-data.txt file with listed currencies and their rates
+![ScreenRecording2024-10-24at5 24 02PM-ezgif com-speed](https://github.com/user-attachments/assets/3a8a126c-6d4f-4ec1-8cf2-c87f1dc8ada3)
