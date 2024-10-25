@@ -3,6 +3,7 @@ package com.mycompany.currencycarlton;
 import static com.mycompany.currencycarlton.Scraper.*;
 import static com.mycompany.currencycarlton.Statements.*;
 import java.io.IOException;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.InputMismatchException;
@@ -92,11 +93,15 @@ public class CurrencyCarlton {
             try {
         
                 double amt = scan.nextDouble();
-
+                
+                // Conversion logic
                 double conversion = (amt/rates.get(from))*rates.get(to);
                 System.out.print("equates to..\n");
                 System.out.print(icon[to]+" ");
-                System.out.println(String.format("%.3f",conversion));
+                // Formatting the conversion to put a comma at the thousands place
+                DecimalFormat format = new DecimalFormat("#,###.###");
+                String output = format.format(conversion);
+                System.out.println(output);
                 System.out.println(getTime()+"\n====================================");
    
                 break;
