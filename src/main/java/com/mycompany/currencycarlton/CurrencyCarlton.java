@@ -5,7 +5,6 @@ import static com.mycompany.currencycarlton.Statements.*;
 import java.io.IOException;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -114,11 +113,14 @@ public class CurrencyCarlton {
     }
         
         
-        // TODO: ALLOW USER TO DO MULTIPLE CONVErsIONS
         scan.nextLine();
         System.out.println("\nWould you like to run again? (y/n)");
         String anotherInput = scan.nextLine().toLowerCase();   
         restart = anotherInput.equals("y");
+        if (restart == true) {
+            scrapeData();
+            readToArray(names,rates);
+        }
             
      }
         // prints outro message
