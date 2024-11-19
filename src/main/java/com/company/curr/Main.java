@@ -1,7 +1,7 @@
-package com.mycompany.currencycarlton;
+package com.company.curr;
 
-import static com.mycompany.currencycarlton.Scraper.*;
-import static com.mycompany.currencycarlton.Statements.*;
+import static com.company.curr.Scraper.*;
+import static com.company.curr.Statements.*;
 import java.io.IOException;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
@@ -17,7 +17,7 @@ import java.util.Scanner;
 
 // Driver class where all the Conversion happens
 
-public class CurrencyCarlton {
+public class Main {
     
     /**
      * ArrayList names: holds names of currencies
@@ -118,8 +118,9 @@ public class CurrencyCarlton {
         String anotherInput = scan.nextLine().toLowerCase();   
         restart = anotherInput.equals("y");
         if (restart == true) {
-            scrapeData();
-            readToArray(names,rates);
+            // TODO: FIX THIS UI ERROR
+            //scrapeData();
+            //readToArray(names,rates);
         }
             
      }

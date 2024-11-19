@@ -1,0 +1,54 @@
+Updated as of Tue, 19 Nov 2024 15:53 EST (from URL: https://www.x-rates.com/table/?from=USD&amount=1)
+
+Argentine Peso:1001.747241
+Australian Dollar:1.530703
+Bahraini Dinar:0.376
+Botswana Pula:13.636362
+Brazilian Real:5.769454
+Bruneian Dollar:1.337566
+Bulgarian Lev:1.845643
+Canadian Dollar:1.396229
+Chilean Peso:971.233733
+Chinese Yuan Renminbi:7.238597
+Colombian Peso:4395.603868
+Czech Koruna:23.862533
+Danish Krone:7.038535
+Euro:0.943662
+Hong Kong Dollar:7.783669
+Hungarian Forint:385.586097
+Icelandic Krona:137.305891
+Indian Rupee:84.407748
+Indonesian Rupiah:15844.8443
+Iranian Rial:42082.03808
+Israeli Shekel:3.743122
+Japanese Yen:154.682074
+Kazakhstani Tenge:497.022832
+South Korean Won:1393.083044
+Kuwaiti Dinar:0.307418
+Libyan Dinar:4.879935
+Malaysian Ringgit:4.474472
+Mauritian Rupee:46.322679
+Mexican Peso:20.098025
+Nepalese Rupee:135.115703
+New Zealand Dollar:1.691289
+Norwegian Krone:10.97334
+Omani Rial:0.385017
+Pakistani Rupee:277.662244
+Philippine Peso:58.877288
+Polish Zloty:4.089627
+Qatari Riyal:3.64
+Romanian New Leu:4.696538
+Russian Ruble:100.567198
+Saudi Arabian Riyal:3.75
+Singapore Dollar:1.337566
+South African Rand:18.072126
+Sri Lankan Rupee:291.922859
+Swedish Krona:10.915796
+Swiss Franc:0.882378
+Taiwan New Dollar:32.3764
+Thai Baht:34.540899
+Trinidadian Dollar:6.78318
+Turkish Lira:34.487134
+Emirati Dirham:3.6725
+British Pound:0.788378
+Venezuelan Bolivar:4578443.846143

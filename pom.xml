@@ -9,7 +9,7 @@
     </dependencies>
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.mycompany</groupId>
-    <artifactId>CurrencyCarlton</artifactId>
+    <artifactId>CurrencyConverter</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
     <properties>

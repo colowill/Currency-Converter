@@ -1,4 +1,4 @@
-package com.mycompany.currencycarlton;
+package com.company.curr;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;

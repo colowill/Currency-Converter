@@ -1,6 +1,6 @@
-package com.mycompany.currencycarlton;
+package com.company.curr;
 
-import static com.mycompany.currencycarlton.Statements.getTime;
+import static com.company.curr.Statements.getTime;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
