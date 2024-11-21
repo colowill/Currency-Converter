@@ -11,11 +11,10 @@ import java.util.Scanner;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
-import java.util.LinkedHashMap;
 
 public class Scraper {
     
-    static String source_file = "src/main/java/com/mycompany/currencycarlton/data.txt";
+    static final String source_file = "src/main/java/com/company/curr/data.txt";
     
     static File data_file = new File(source_file);
     
